@@ -1,0 +1,87 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#eef2ff',
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#6366f1',
+          600: '#4f46e5',
+          700: '#4338ca',
+          800: '#3730a3',
+          900: '#312e81',
+          950: '#1e1b4b',
+        },
+        secondary: {
+          50: '#f5f3ff',
+          100: '#ede9fe',
+          200: '#ddd6fe',
+          300: '#c4b5fd',
+          400: '#a78bfa',
+          500: '#8b5cf6',
+          600: '#7c3aed',
+          700: '#6d28d9',
+          800: '#5b21b6',
+          900: '#4c1d95',
+          950: '#2e1065',
+        },
+        accent: {
+          50: '#eefbff',
+          100: '#d7f4fe',
+          200: '#b8ecfe',
+          300: '#86e0fe',
+          400: '#4bcffa',
+          500: '#21b8ed',
+          600: '#0e97cb',
+          700: '#0e79a5',
+          800: '#0e6588',
+          900: '#125373',
+          950: '#0c3143',
+        },
+        dark: {
+          50: '#f6f6f7',
+          100: '#e1e3e5',
+          200: '#c2c6cb',
+          300: '#9ca2ac',
+          400: '#767e8c',
+          500: '#5b6273',
+          600: '#484c5c',
+          700: '#3b3e4b',
+          800: '#27292f',
+          900: '#1a1b1f',
+          950: '#0f1012',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+        display: ['Space Grotesk', 'ui-sans-serif', 'system-ui'],
+        mono: ['Fira Code', 'ui-monospace', 'monospace'],
+      },
+      boxShadow: {
+        glow: '0 0 15px 2px rgba(101, 101, 255, 0.15)',
+        'glow-strong': '0 0 20px 5px rgba(101, 101, 255, 0.25)',
+      },
+      keyframes: {
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        'pulse-glow': {
+          '0%, 100%': { boxShadow: '0 0 10px 1px rgba(101, 101, 255, 0.1)' },
+          '50%': { boxShadow: '0 0 20px 4px rgba(101, 101, 255, 0.2)' },
+        },
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'float-slow': 'float 8s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+      },
+    },
+  },
+  plugins: [],
+};

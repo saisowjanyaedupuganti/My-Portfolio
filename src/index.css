@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: rgb(99, 102, 241);
+  --secondary: rgb(139, 92, 246);
+  --accent: rgb(33, 184, 237);
+  --background: rgb(15, 16, 18);
+  --foreground: rgb(246, 246, 247);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-950 text-white font-sans;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Custom cursor styles */
+.custom-cursor {
+  @apply fixed w-8 h-8 rounded-full pointer-events-none z-50 mix-blend-difference transition-transform duration-150 ease-out;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.cursor-link {
+  @apply scale-150 bg-white;
+}
+
+/* Custom animation classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500;
+}
+
+/* Glass effect */
+.glass {
+  @apply backdrop-blur-md bg-dark-800/30 border border-white/10;
+}
+
+/* Magic background gradient */
+.magic-bg {
+  background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15), transparent 70%);
+}
